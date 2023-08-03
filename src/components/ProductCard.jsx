@@ -8,9 +8,7 @@ const ProductCard = ({ product }) => {
 
  const dispatch = useDispatch();
 
- const handleAddtoCart = ()=>{
-  dispatch(addToCart({...product, Quantity:1}))
- }
+
 
   const navigate = useNavigate()
   const ntitle = title.toLowerCase().split(" ").join("")
@@ -30,9 +28,7 @@ const ProductCard = ({ product }) => {
       <div className="w-full border-[1px] px-2 py-4 flex justify-between">
         <div>{title}</div>
         <div>${price}</div>
-        <div>
-        <button onClick={handleAddtoCart} className="border-[1px]">AddtoCart</button>
-      </div>
+        
       </div>
       
     </div>
